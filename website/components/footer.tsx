@@ -28,7 +28,7 @@ export function HostedByVercel() {
       rel="noopener noreferrer"
     >
       <div className={styles['secondary-text']}>Hosted by </div>
-      <img src="https://indent.com/static/indent_text_white.png" height={20} style={{ marginLeft: 8 }} />
+      <img src="https://indent.com/static/indent_text_white.png" height={20} />
     </a>
   );
 }
