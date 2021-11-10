@@ -41,6 +41,8 @@ export default function Hero() {
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
+        <p>3pm - 4pm PT</p>
+        <div className={styles['description-separator']} />
         <p>
           <strong title="Extremely">Online</strong>
         </p>

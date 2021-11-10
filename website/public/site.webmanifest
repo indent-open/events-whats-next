@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "What’s Next.js",
+  "short_name": "What’s Next.js",
+  "description": "What’s Next.js -> https://demo.vercel.events",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

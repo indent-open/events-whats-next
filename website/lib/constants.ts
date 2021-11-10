@@ -20,8 +20,9 @@ export const TWITTER_USER_NAME = 'indent';
 export const BRAND_NAME = 'What’s Next.js';
 export const SITE_NAME_MULTILINE = ['What’s', 'Next.js'];
 export const SITE_NAME = 'What’s Next.js';
+export const META_TITLE = 'What’s Next.js - Online meetup for Next.js community';
 export const META_DESCRIPTION =
-  'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
+  'Online meetup for what\'s coming up next in the Next.js community';
 export const SITE_DESCRIPTION =
   'An interactive online experience by the community, free for everyone.';
 export const DATE = 'November 22, 2021';

@@ -23,6 +23,7 @@ import Header from '@components/header';
 
 import { getAllStages } from '@lib/cms-api';
 import { Stage } from '@lib/types';
+import styles from '../components/contact.module.css'
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
@@ -31,14 +32,30 @@ type Props = {
 
 export default function SchedulePage({ allStages }: Props) {
   const meta = {
-    title: 'Schedule - Virtual Event Starter Kit',
-    description: META_DESCRIPTION
+    title: 'Schedule - What’s Next.js',
+    description:
+      'There will be a 5-minute introduction, 40 minutes of talks and a 15-minute Q&A on Discord.'
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Schedule" description={meta.description} />
+        <Header
+          hero="Schedule"
+          description={
+            <>
+              {meta.description.split('Discord')[0]}{' '}
+              <a
+                href="https://nextjs.org/discord"
+                className={styles['contact-email']}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discord
+              </a>.
+            </>
+          }
+        />
         <Schedule allStages={allStages} />
       </Layout>
     </Page>
