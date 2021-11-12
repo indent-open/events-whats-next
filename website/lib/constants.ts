@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://whats-nextjs.vercel.app'; // 'https://whatsnext.js.org';
+export const SITE_URL = 'https://whatsnext.js.org';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'indent';
 export const BRAND_NAME = 'What’s Next.js';
