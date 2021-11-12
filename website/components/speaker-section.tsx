@@ -52,7 +52,7 @@ export default function SpeakerSection({ speaker }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to speakers
+          Speakers
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
@@ -107,14 +107,19 @@ export default function SpeakerSection({ speaker }: Props) {
               </span>
             )}
           </div>
+          {speaker.talk && (
+            <div className={styles['talk-details']}>
+              <h3 className={styles['socials-header']}>
+                <span style={{ opacity: 0.6, userSelect: 'none', marginRight: 4 }}>
+                  Talking about
+                </span>
+                {speaker.talk.title}
+              </h3>
+              <p>{speaker.talk.description}</p>
+            </div>
+          )}
         </div>
       </div>
-      {speaker.talk && (
-        <div className={styles['talk-details']}>
-          <h3 className={styles['socials-header']}>{speaker.talk.title}</h3>
-          <p>{speaker.talk.description}</p>
-        </div>
-      )}
     </>
   );
 }

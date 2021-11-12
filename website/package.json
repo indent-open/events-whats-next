@@ -1,10 +1,10 @@
 {
-  "name": "virtual-event-starter-kit",
-  "description": "Starter kit for your virtual event.",
+  "name": "@indent-open/events-whats-next",
+  "description": "Online meetup for Next.js",
   "private": true,
-  "repository": "vercel/virtual-event-starter-kit",
-  "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "repository": "indent-open/events-whats-next",
+  "author": "Indent Inc",
+  "homepage": "https://whatsnext.js.org",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=12"
