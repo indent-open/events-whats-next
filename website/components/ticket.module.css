@@ -40,13 +40,13 @@
   color: var(--secondary-color);
   text-align: center;
   margin: 30px auto;
-  max-width: 350px;
+  max-width: 390px;
 }
 
 @media (min-width: 768px) {
   .description {
     font-size: 24px;
-    max-width: 415px;
+    max-width: 480px;
   }
 }
 
