@@ -28,6 +28,7 @@
 }
 
 .row {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 24px;
@@ -45,13 +46,14 @@
   min-width: 220px;
   padding-bottom: var(--space-2x);
   position: absolute;
+  top: 0;
   left: initial;
   color: var(--brand);
 }
 
 .talks {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   margin-top: 40px;
 }
@@ -60,7 +62,7 @@
   margin-right: 24px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 767px) {
   .container {
     border-top: 1px solid var(--accents-7);
     margin-top: var(--space-4x);
