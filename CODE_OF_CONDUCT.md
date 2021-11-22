@@ -13,6 +13,7 @@ This means:
 - Respect others views whether they do/don’t align with yours
 - Display empathy towards other community members
 - Be respectful of others in the public & private media
+- Learn together and assume best intentions
 
 **Don't:**
 

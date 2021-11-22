@@ -26,8 +26,9 @@
 }
 
 .footer-link {
-  color: var(--secondary-color);
-  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 16px;
   transition: color 0.2s ease;
 }
 

@@ -22,13 +22,12 @@ import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@
 export function HostedByVercel() {
   return (
     <a
-      href="https://indent.com"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSevLITq2SdkN16Wh5GCu86kj3OWQ8E7Dmk7OxjzUkQJKAnDxw/viewform"
       className={cn(styles['footer-link'], styles['footer-logo'])}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className={styles['secondary-text']}>Hosted by </div>
-      <img src="https://indent.com/static/indent_text_white.png" height={20} />
+      Apply to Speak &rarr;
     </a>
   );
 }
@@ -38,7 +37,7 @@ export default function Footer() {
     <footer className={cn(styles.footer)}>
       <div className={styles['footer-legal']}>
         <div className={styles['footer-hostedby']}>
-          {/* <HostedByVercel /> */}
+          <HostedByVercel />
           <div className={styles['footer-separator']} />
         </div>
         <div className={styles['footer-copyright']}>
