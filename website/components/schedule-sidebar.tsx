@@ -32,7 +32,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
   const currentStage = allStages.find((s: Stage) => s.slug === currentStageSlug);
 
   useEffect(() => {
-    setCurrentStageSlug(router.query.slug);
+    setCurrentStageSlug(router.query.slug || 'talks');
   }, [router.query.slug]);
 
   return (

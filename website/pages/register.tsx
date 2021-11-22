@@ -14,52 +14,34 @@
  * limitations under the License.
  */
 
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { useRouter } from 'next/router';
+import { SkipNavContent } from '@reach/skip-nav';
 
 import Page from '@components/page';
-import StageContainer from '@components/stage-container';
-import Layout from '@components/layout';
-
-import { getAllStages } from '@lib/cms-api';
-import { Stage } from '@lib/types';
+import ConfContent from '@components/index';
 import { META_DESCRIPTION, META_TITLE } from '@lib/constants';
 
-type Props = {
-  stage: Stage;
-  allStages: Stage[];
-};
-
-export default function StagePage({ stage, allStages }: Props) {
+export default function Conf() {
+  const { query } = useRouter();
   const meta = {
     title: META_TITLE,
     description: META_DESCRIPTION
   };
+  const ticketNumber = query.ticketNumber?.toString();
+  const defaultUserData = {
+    id: query.id?.toString(),
+    ticketNumber: ticketNumber ? parseInt(ticketNumber, 10) : undefined,
+    name: query.name?.toString(),
+    username: query.username?.toString()
+  };
 
   return (
     <Page meta={meta} fullViewport>
-      <Layout>
-        <StageContainer stage={stage} allStages={allStages} />
-      </Layout>
+      <SkipNavContent />
+      <ConfContent
+        defaultUserData={defaultUserData}
+        defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
+      />
     </Page>
   );
 }
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const slug = 'talks';
-  const stages = await getAllStages();
-  const stage = stages.find((s: Stage) => s.slug === slug) || null;
-
-  if (!stage) {
-    return {
-      notFound: true
-    };
-  }
-
-  return {
-    props: {
-      stage,
-      allStages: stages
-    },
-    revalidate: 60
-  };
-};

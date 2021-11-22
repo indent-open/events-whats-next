@@ -41,7 +41,7 @@ export default function StageContainer({ stage, allStages }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.streamContainer}>
-        {loginStatus === 'loggedIn' ? (
+        {(true || loginStatus === 'loggedIn') ? (
           <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
             <iframe
               allow="autoplay; picture-in-picture"
